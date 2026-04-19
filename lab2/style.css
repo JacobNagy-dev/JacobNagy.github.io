@@ -1,0 +1,30 @@
+body {
+  font-family:cursive;
+  margin: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}
+
+input, select, button {
+  margin: 5px;
+  padding: 5px;
+}
+
+ol {
+  text-align: left;
+  display:inline-block;
+  margin-top: 15px;
+  width: 300px;
+}
+
+li {
+word-wrap: break-word;
+}
+
+.todoInput {
+  text-align: center;
+}

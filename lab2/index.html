@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Lesson 5:Partner Lab 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<a href="../index.html" class="btn btn-light mb-4">← Back to Portfolio</a>
+<body>
+
+  <h1 id="nameUser">Hello User!</h1>
+  <p id="messageUser">Awaiting user customization</p>
+
+  <h2>Enter your customization below</h2>
+
+  <label for="name">Enter your name:</label>
+  <input type="text" id="name">
+  <br><br>
+
+  <label for="message">Enter a message:</label>
+  <input type="text" id="message">
+  <br><br>
+
+  <label for="color">Choose a background color:</label>
+  <select id="color">
+    <option value="white">White</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    <option value="black">Absolutely ruin the website!</option>
+  </select>
+  <br><br>
+
+  <button onclick="customizePage()">Submit</button>
+
+  <hr>
+
+  <h2>To Do List</h2>
+  <label for="todo">Enter a To Do item:</label>
+  <input type="text" id="todo">
+  <button onclick="addtodo()">Add Item</button>
+
+  <ol id="todoList"></ol>
+
+  <script src="script.js"></script>
+</body>
+</html>

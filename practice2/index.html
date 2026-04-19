@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>l8p2</title>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: sans-serif;
+         background: black;
+         color: white;
+         padding: 20px;
+      }
+
+      .container {
+         display: grid;
+         grid-template-columns: 1fr 2fr 1fr;
+         grid-template-rows: 100px 300px 120px;
+         gap: 15px;
+         grid-template-areas:
+            "header header header"
+            "left main right"
+            "footer footer footer";
+      }
+
+      header {
+         grid-area: header;
+         background: #111;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 2rem;
+         border: 1px solid #333;
+      }
+
+      aside.left {
+         grid-area: left;
+         background: #111;
+         padding: 15px;
+         text-align: center;
+         border: 1px solid #333;
+      }
+
+      main {
+         grid-area: main;
+         background: #111;
+         padding: 20px;
+         text-align: center;
+         border: 1px solid #333;
+      }
+
+      aside.right {
+         grid-area: right;
+         background: #111;
+         padding: 15px;
+         text-align: center;
+         border: 1px solid #333;
+      }
+
+      footer {
+         grid-area: footer;
+         background: #111;
+         position: relative;
+         overflow: hidden;
+         display: flex;
+         align-items: center;
+         border: 1px solid #333;
+      }
+
+      .filtered-img {
+         width: 120px;
+         margin: 10px;
+         filter: grayscale(100%) brightness(130%);
+      }
+
+      .filtered-text {
+         filter: contrast(150%) blur(1px);
+      }
+      
+
+      .card {
+         display: inline-block;
+         background: #222;
+         padding: 20px;
+         margin: 15px;
+         border: 1px solid #555;
+         transition: transform 0.5s ease, background 0.5s ease;
+      }
+
+      .spin-card {
+         transform: rotate(-8deg) scale(1);
+      }
+
+      .spin-card:hover {
+         transform: rotate(8deg) scale(1.2);
+         background: darkred;
+      }     
+
+      .slide-card {
+         transform: translateX(0) skew(0deg, 0deg);
+      }
+
+      .slide-card:hover {
+         transform: translateX(20px) skew(12deg, 5deg);
+         background: darkblue;
+      }
+
+      .ball {
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         position: absolute;
+         animation: roll 5s linear infinite;
+      }
+
+      .ball:nth-child(1) { top: 10px; animation-delay: 0s; }
+      .ball:nth-child(2) { top: 40px; animation-delay: 1s; }
+      .ball:nth-child(3) { top: 70px; animation-delay: 2s; }
+      
+      @keyframes roll {
+         0% {
+            left: -40px;
+            background: red;
+         }
+         50% {
+            background: yellow;
+         }
+         100% {
+            left: calc(100% + 40px);
+            background: blue;
+         }
+      }
+   </style>
+</head>
+<body>
+     <a href="../index.html" class="btn btn-light mb-4">← Back to Portfolio</a>
+   <div class="container">
+      <header>Lesson 8: Practice activity 2</header>
+
+<aside class="left">
+   <h2>Oh wow some filters!</h2>
+   <img id="img" class="filtered-img" src="cry.png">
+   <br>
+   <p id="text" class="filtered-text">Put your glasses on</p>
+   <br>
+   <button type="button" onclick="removeFilters()">Put them on</button>
+   <button type="button" onclick="addFilters()">Take them off</button>
+</aside>
+
+      <main>
+   <h2>Man those hovers really are transforming those boxes!</h2>
+   <div class="card spin-card">Rotate + Scale</div>
+   <div class="card slide-card">Move + Skew</div>
+</main>
+
+<!---I really have no idea why the speed up makes two balls stack on top of eachother.
+This would probably be easier with JS. I just wanted to do something cool. Ive already put
+2 more hours of work into this than was necessary so Im just gonna live with it.--->
+      <aside class="right">
+    <h2>Ball Control Center</h2>
+   <button type="button" onclick="speedUp()">Speed Up</button>
+   <button type="button" onclick="slowDown()">Slow Down</button>
+</aside>
+
+      <footer>
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+      </footer>
+   </div>
+
+  <script>
+function removeFilters() {
+   document.getElementById("img").style.filter = "none";
+   document.getElementById("text").style.filter = "none";
+}
+
+function addFilters() {
+   document.getElementById("img").style.filter = "grayscale(100%) brightness(130%)";
+   document.getElementById("text").style.filter = "contrast(150%) blur(1px)";
+}
+
+function speedUp() {
+   document.querySelectorAll(".ball").forEach(function(ball) {
+      ball.style.animationDuration = "2s";
+   });
+}
+function slowDown() {
+   document.querySelectorAll(".ball").forEach(function(ball) {
+      ball.style.animationDuration = "8s";
+   });
+}
+
+</script>
+</body>
+</html>
