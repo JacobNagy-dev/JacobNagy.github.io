@@ -1,2 +1,2 @@
 # JacobNagy.github.io
-Coming Soon Webpage
+IST 250 webpage portfolio
