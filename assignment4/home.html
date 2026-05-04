@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Home page for a Pennsylvania native mushrooms">
+  <title>Home | Native Mushrooms of Pennsylvania</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="home.html">
+        <span class="title">
+        </span>
+        <span>Native Mushrooms of Pennsylvania</span>
+      </a>
+
+      <nav aria-label="Primary navigation">
+        <div class="nav-links">
+          <a href="home.html" class="active">Home</a>
+          <a href="species.html">Species</a>
+          <a href="habitats.html">Habitats</a>
+          <a href="safety.html">Safety</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Native Mushrooms of Pennsylvania</h1>
+          <p>This website is a shert overview of some species of edible native Pennsyvanian mushrooms.</p>
+          <a class="btn" href="species.html">View Species</a>
+          <a class="btn btn-secondary" href="contact.html">Contact Page</a>
+        </div>
+
+        <div class="panel image-frame">
+          <img src="img/snailshroom.jpg" alt="Illustration of a snail on a mushroom" width="1200" height="900">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+  <div class="container split-grid">
+    <div class="fact-box">
+      <h2>Best times to look</h2>
+      <ul class="clean-list">
+        <li>April and May are popular months for spring mushroom activity.</li>
+        <li>Summer rain and humidity often bring more growth in forested areas.</li>
+        <li>Cool autumn forests are the easiest places to spot fungi on logs, stumps, and fallen leaves.</li>
+      </ul>
+    </div>
+
+    <div class="fact-box">
+      <h2>Why mushrooms matter</h2>
+      <ul class="clean-list">
+        <li>Many fungi break down dead wood and leaf litter.</li>
+        <li>Some help recycle nutrients in forest ecosystems.</li>
+        <li>Edible mushrooms are rich in vital nutrients.</li>
+        <li>Some edible mushrooms are proven to cause neurogenesis (The creation of new neurons) within humans!</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+      <div class="container warning-box">
+        <h2>Important safety note</h2>
+        <p>This website is for education only. Never eat a wild mushroom unless it has been identified by a trained expert.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container form-card">
+        <h2>Quick quiz</h2>
+        <p>Which season are you most likely to find morels?</p>
+
+        <div>
+          <label><input type="radio" name="quiz-answer" value="summer"> Summer</label><br>
+          <label><input type="radio" name="quiz-answer" value="spring"> Spring</label><br>
+          <label><input type="radio" name="quiz-answer" value="winter"> Winter</label>
+        </div>
+
+        <br>
+        <button class="btn" type="button" data-quiz-button>Check Answer</button>
+        <p class="quiz-result"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fixed-footer">
+    <div class="container footer-grid">
+      <p>&copy; <span class="year"></span> Native Mushrooms of Pennsylvania</p>
+      <a href="contact.html">Contact</a>
+      <a href="home.html">Home</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
